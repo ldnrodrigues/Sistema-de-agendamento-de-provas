@@ -1,0 +1,71 @@
+footer {
+    background-color: #121212;
+    font-size: 14px;
+    color: #ffffff;
+    padding: 1rem;
+}
+
+.titulo-footer {
+    color: #ffffff;
+    font-size: 22px;
+}
+
+.redes-sociais {
+    font-size: 20px;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.icones a {
+    display: inline-block;
+    justify-content: center;
+    padding: 10px 6px;
+    transition: transform 0.3s ease;
+}
+
+.icones a:hover {
+    transform: translateY(-5px);
+}
+
+.to-the-top {
+    background: rgb(0,140,255);
+    border-radius: 50%;
+    border-color: rgb(0,140,255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    position: fixed;
+    right: 70px;
+    bottom: 8rem;
+    width: 50px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.to-the-top.show {
+    opacity: 1;
+}
+
+.fa {
+    font-size: 24px;
+    color: white;
+    transition: transform 0.3s ease;
+}
+
+.to-the-top:hover .fa {
+    transform: translateY(-5px);
+}
+
+.email {
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+    color: #fff;
+}
+
+.email:hover {
+    color: rgb(0,140,255);
+}
