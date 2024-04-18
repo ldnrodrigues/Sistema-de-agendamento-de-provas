@@ -25,7 +25,7 @@
 <nav class="navbar navbar-expand-lg justify-content-center d-none d-md-block" role="navigation">
   <div class="container-fluid">
     <a class="navbar-brand" href="http://127.0.0.1:5500/index.html">
-      <img src="Imagens/Capturar.JPG" alt="logo" width="200px" style="margin-left: 2rem;">
+      <img src="Imagens/logo.JPG" alt="logo" width="60px" style="margin-left: 2rem;">
     </a>
       <div class="col-4 justify-content-center">
         <ul class="navbar-nav">
@@ -36,7 +36,7 @@
             <a class="nav-link" href="#sobre-mim">Cardápio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#formulario-de-contato">Conheça Nosso Ambiente</a>
+            <a class="nav-link" href="#ambiente">Conheça Nosso Ambiente</a>
           </li>
             </ul>
           </div>
@@ -45,148 +45,180 @@
 
 <!--Banner-->
 
-  <div class="container-fluid bg-black">
-    <div class="row justify-content-center align-items-center">
-      <div class="col-lg-5 order-lg-1 mt-5 text-white">
+<div class="container-fluid bg-black">
+  <div class="row justify-content-center align-items-center">
+    <div class="col-lg-5 mt-5 text-white">
+      <h1 style="line-height: 62px; font-size: 56px;" id="intro">Experimente Nossos Deliciosos <span style="color: red;">Hamburguers</span>!</h1><br>
         <h1 style="line-height: 46px;">Bem-vindo à The Tasty Grill!</h1> <br>
-        <h1 style="line-height: 46px;">Experimente Nossos Deliciosos <span style="color: red;">Hamburguers</span>!</h1>
           <p style="line-height: 28px;">Somos uma hamburgueria dedicada a servir deliciosos hambúrgueres artesanais preparados com ingredientes frescos e de alta qualidade. Aqui, buscamos proporcionar uma 
           experiência gastronômica autêntica e saborosa, onde cada hambúrguer é cuidadosamente montado para garantir o máximo de sabor em cada mordida. <br><br>
           Bom apetite!</p>
         <div class="d-grid gap-2 d-md-flex justify-content-start">
-          <button type="button" class="btn btn-lg mt-3 me-md-3 text-white custom-button">Faça já sua Reserva</button>
-          <button type="button" class="btn btn-lg mt-3 text-white custom-button">Faça seu Pedido por Whatsapp</button>
+          <button type="button" class="btn btn-lg mt-3 me-md-3 text-white custom-button"><a href="#reserva">Faça já sua Reserva</a></button>
+          <button type="button" class="btn btn-lg mt-3 text-white custom-button"><a href="https://wa.me/seu-numero-de-telefone" target="_blank">Faça seu Pedido por Whatsapp</a></button>
         </div>
       </div>
-      <div class="col-lg-5 order-lg-2 order-1 d-flex justify-content-end mt-5" data-aos="fade-left">
-        <img src="Imagens/banner/fundo-ia.png" class="img-fluid" alt="Foto_burguer" id="banner" width="900px" height="900px">
+        <div class="col-lg-5 mt-5" data-aos="fade-left">
+      <img src="Imagens/banner/fundo-ia.png" class="img-fluid" alt="Foto_burguer" id="banner" width="900px" height="900px">
+    </div>
+  </div>
+</div>
+
+<div class="py-5 text-center bg-black">
+  <h1 class="display-5 fw-bold text-white with-border" data-aos="zoom-in-down">Cardápio</h1><br>
+    <div class="container">
+      <div class="row">
+
+        <div class="col mt-5 mb-5">
+          <img src="Imagens/cardapio-1.png" alt="Hamburguer-exemplo-1" width="400px" height="400px" data-aos="zoom-in" data-aos-duration="1500">
+        </div>
+
+        <div class="col mt-5 mb-5">
+          <img src="Imagens/cardapio-2.png" alt="Hamburguer-exemplo-2" width="400px" height="350px" data-aos="zoom-in" data-aos-duration="1500">
+        </div>
+
+        <div class="col mt-5 mb-5">
+          <img src="Imagens/cardapio-3.png" alt="Hamburguer-exemplo-3" width="400px" height="400px" data-aos="zoom-in" data-aos-duration="1500">
+        </div>
+
+        <div class="d-flex justify-content-center mt-5 mb-5" data-aos="zoom-in" data-aos-duration="1500">
+          <button class="btn btn-lg text-white custom-button">Ver Cardápio Completo</button>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="text-secondary py-5 text-center bg-black">
+  <h1 class="display-5 fw-bold text-white" data-aos="zoom-in-down" id="ambiente">Conheça Nosso Ambiente</h1><br>
+    <div class="container">
+      <div class="row">
+
+      <div class="mt-5 mb-5">
+        <img src="Imagens/foto-5.jpg" alt="Foto-Ambiente-1" height="500px" width="712px" data-aos="fade-down" class="imagem-mobile">
+        <img src="Imagens/foto-3.jpg" alt="Foto de um Hamburguer" height="500px" width="512px" data-aos="fade-left" class="imagem-mobile">
+        <img src="Imagens/foto-1.jpg" class="mt-2 imagem-mobile" alt="Foto de um Hamburguer" height="500px" width="820px" data-aos="fade-up">
+        <img src="Imagens/foto-4.jpg" class="mt-2 imagem-mobile" alt="Foto de um Hamburguer" height="500px" width="404px" data-aos="fade-left">
+      </div>
+
       </div>
     </div>
   </div>
 
-    <div class="text-secondary py-5 text-center bg-black">
-      <h1 class="display-5 fw-bold text-white with-border" data-aos="zoom-in-down">Cardápio</h1><br>
-        <div class="container text-center">
-          <div class="row align-items-center">
+  <div class="container-fluid py-5 bg-black">
+    <h1 class="text-center fw-bold mb-5 mt-5 text-white" id="reserva" data-aos="zoom-in-down">Faça sua Reserva</h1>
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <form data-aos="zoom-in-down">
+            <div class="mb-4">
+              <label for="nome" class="form-label">Nome</label>
+              <input type="text" class="form-control border-0 border-bottom bg-black text-white" id="nome" placeholder="Seu nome" style="color: white;">
+            </div>
+            <div class="mb-4">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control border-0 border-bottom bg-black text-white" id="email" placeholder="Seu email" style="color: white;">
+            </div>
+            <div class="mb-4">
+              <label for="telefone" class="form-label">Telefone</label>
+              <input type="tel" class="form-control border-0 border-bottom bg-black text-white" id="telefone" placeholder="Seu telefone" style="color: white;">
+            </div>
+            <div class="row mb-4">
+              <div class="col">
+                <label for="data" class="form-label" title="Clique para escolher a data">Data da Reserva</label>
+                <input type="date" class="form-control border-0 border-bottom bg-black text-white" id="data" style="color: white;">
+              </div>
+                <div class="col">
+                  <label for="horario" class="form-label">Horário</label>
+                    <select class="form-select border-0 border-bottom bg-black text-white" id="horario" style="color: white;">
+                      <option selected>Escolha o horário</option>
+                      <option value="9:00">9:00</option>
+                      <option value="12:00">12:00</option>
+                      <option value="18:00">18:00</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="mb-4">
+                  <label for="numPessoas" class="form-label">Número de Pessoas</label>
+                    <select class="form-select border-0 border-bottom bg-black text-white" id="numPessoas" style="color: white;">
+                      <option selected>Escolha o número de pessoas</option>
+                      <option value="1">1 pessoa</option>
+                      <option value="2">2 pessoas</option>
+                      <option value="3">3 pessoas</option>
+                      <option value="4">4 pessoas</option>
+                      <option value="5">5 pessoas</option>
+                    </select>
+                  </div>
+                    <div class="mb-4">
+                      <label for="observacoes" class="form-label">Observações</label>
+                      <textarea class="form-control border-0 border-bottom bg-black text-white" id="observacoes" rows="3" placeholder="Digite suas observações" style="color: white;"></textarea>
+                    </div>
+                  <div class="text-center">
+                    <button type="submit" class="btn custom-button btn-lg text-white mt-5 mb-5">Enviar Reserva</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>    
 
-          <div class="col mt-5 mb-5">
-            <img src="Imagens/cardapio-1.png" alt="" width="400px" height="400px" data-aos="zoom-in" data-aos-duration="1500">
+        <footer id="footer">
+          <div class="container">
+            <div class="row justify-content-center">
+
+              <div class="col-6">
+                <div class="titulo-footer">
+                  <p><strong>@Leonardo Rodrigues</strong></p>
+                </div>
+                  <div class="contact">
+                <p><img src="Imagens/footer/email.png" alt="email-logo" width="20px"><strong> E-mail para contato:</strong> <a href="mailto:lgllleonardo360@gmail.com" class="email">lglleonardo360@gmail.com</a></p>
+                <p><img src="Imagens/footer/ping.png" alt="ping-logo" width="25px"> Gravataí, Rio Grande do Sul, Brasil</p>
+              </div>
+            </div>
+
+              <div class="col-3">
+                <a class="redes-sociais"><strong>Redes Sociais</strong></a>
+                  <div class="icones">
+                    <a href="https://www.instagram.com/leozin_c7/" target="_blank">
+                      <img src="Imagens/redes_sociais/instagram.png" width="32" height="32" alt="Instagram logo"></a>
+                    <a href="#" target="_blank">
+                      <img src="Imagens/redes_sociais/linkedin.png" width="31" height="31" alt="Linkedin logo"></a>
+                    <a href="https://github.com/ldnrodrigues" target="_blank">
+                  <img src="Imagens/redes_sociais/github.png" width="31" height="31" alt="Github logo"></a>
+                </div>
+              </div>
+
+            <!-- row -->
+            </div>
+
+          <!-- container -->
+
           </div>
 
-          <div class="col mt-5 mb-5">
-            <img src="Imagens/cardapio-2.png" alt="" width="400px" height="400px" data-aos="zoom-in" data-aos-duration="1500">
-          </div>
+        </footer>
 
-          <div class="col mt-5 mb-5">
-            <img src="Imagens/cardapio-3.png" alt="" width="400px" height="400px" data-aos="zoom-in" data-aos-duration="1500">
-          </div>
+      <a href="https://wa.me/seu-numero-de-telefone" target="_blank" class="whatsapp-button" title="Fazer pedido por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+      </a>
 
-          <div class="container fluid d-flex justify-content-center mt-5 mb-5" data-aos="zoom-in" data-aos-duration="1500">
-            <button class="btn btn-lg text-white custom-button">Ver Cardápio Completo</button>
-          </div>
-  
-          </div>
-        </div>
-      </div>
+    <!-- VLibras-->
+    <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
     </div>
-
-    <div class="text-secondary py-5 text-center bg-black">
-      <h1 class="display-5 fw-bold text-white" data-aos="zoom-in-down">Conheça Nosso Ambiente</h1><br>
-        <div class="container">
-          <div class="row">
-
-          <div class="mt-5 mb-5">
-            <img src="Imagens/foto-5.jpg" alt="Foto-Ambiente-1" height="500px" width="712px" data-aos="fade-down">
-            <img src="Imagens/foto-3.jpg" alt="Foto de um Hamburguer" height="500px" width="512px" data-aos="fade-left">
-            <img src="Imagens/foto-1.jpg" class="mt-2" alt="Foto de um Hamburguer" height="500px" width="820px" data-aos="fade-up">
-            <img src="Imagens/foto-4.jpg" class="mt-2" alt="Foto de um Hamburguer" height="500px" width="404px" data-aos="fade-left">
-          </div>
-
-        <div>
-
-        </div>
-
-          </div>
-        </div>
-      </div>
-  
-
-<footer id="footer">
-  <div class="container">
-    <div class="row justify-content-center">
-
-      <div class="col-6">
-        <div class="titulo-footer">
-          <p><strong>@Leonardo Rodrigues</strong></p>
-        </div>
-          <div class="contact">
-        <p><img src="Imagens/footer/email.png" alt="email-logo" width="20px"><strong> E-mail para contato:</strong> <a href="mailto:lgllleonardo360@gmail.com" class="email">lglleonardo360@gmail.com</a></p>
-        <p><img src="Imagens/footer/ping.png" alt="ping-logo" width="25px"> Gravataí, Rio Grande do Sul, Brasil</p>
-      </div>
-    </div>
-
-      <div class="col-3">
-        <a class="redes-sociais"><strong>Redes Sociais</strong></a>
-          <div class="icones">
-            <a href="https://www.instagram.com/leozin_c7/" target="_blank">
-              <img src="Imagens/redes_sociais/instagram.png" width="32" height="32" alt="Instagram logo"></a>
-            <a href="#" target="_blank">
-              <img src="Imagens/redes_sociais/linkedin.png" width="31" height="31" alt="Linkedin logo"></a>
-            <a href="https://github.com/ldnrodrigues" target="_blank">
-          <img src="Imagens/redes_sociais/github.png" width="31" height="31" alt="Github logo"></a>
-        </div>
-      </div>
-
-    <!-- row -->
   </div>
 
-<!-- container -->
-
-</div>
-
-</footer>
-
-  <button id="scrollToTopBtn" class="to-the-top" onclick="scrollToTop()" title="Voltar ao Topo">
-    <i class="fa fw fa-arrow-up"></i></button>
-  </button>
-
-<script>
-    function scrollToTop() {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-    }
-
-    window.addEventListener('scroll', function () {
-        var scrollToTopBtn = document.getElementById("scrollToTopBtn");
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-            scrollToTopBtn.classList.add('show');
-        } else {
-            scrollToTopBtn.classList.remove('show');
-        }
-    });
-</script>
-
-<!-- VLibras-->
-<div vw class="enabled">
-    <div vw-access-button class="active"></div>
-    <div vw-plugin-wrapper>
-        <div class="vw-plugin-top-wrapper"></div>
-    </div>
-</div>
-
-<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
 
 <script>
     new window.VLibras.Widget('https://vlibras.gov.br/app');
 </script>
 
-  </footer>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-    <script>
-        AOS.init();
-    </script>
+<script>
+  AOS.init();
+</script>
 
 </body>
 </html>
