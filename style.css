@@ -7,6 +7,7 @@ body {
     padding: 0;
     letter-spacing: 1px;
     font-family: "Poppins", sans-serif;
+    color: #fff !important;
 }
 
 p,a,h1,h2,h3,h4,h5,h6 {
@@ -26,3 +27,41 @@ p,a,h1,h2,h3,h4,h5,h6 {
 .custom-button:hover {
     background-color: rgb(150, 0, 0) !important;
 }
+
+.custom-button a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Altera a cor dos placeholders para branco */
+::-webkit-input-placeholder {
+    color: white !important;
+}
+
+:-moz-placeholder {
+    color: white !important;
+}
+
+::-moz-placeholder {
+    color: white !important;
+}
+
+:-ms-input-placeholder {
+    color: white !important;
+}
+
+.form-control:focus::placeholder {
+    font-size: 0.8em;
+    transform: translateY(-1.5em);
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 991px) {
+
+    .imagem-mobile {
+        height: 180px;
+        width: 180px;
+    }
+
+}
+
