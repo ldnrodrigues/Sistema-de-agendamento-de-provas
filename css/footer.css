@@ -27,39 +27,6 @@ footer {
     transform: translateY(-5px);
 }
 
-.to-the-top {
-    background: rgb(0,140,255);
-    border-radius: 50%;
-    border-color: rgb(0,140,255);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 50px;
-    position: fixed;
-    right: 70px;
-    bottom: 8rem;
-    width: 50px;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    border: none;
-    outline: none;
-    cursor: pointer;
-}
-
-.to-the-top.show {
-    opacity: 1;
-}
-
-.fa {
-    font-size: 24px;
-    color: white;
-    transition: transform 0.3s ease;
-}
-
-.to-the-top:hover .fa {
-    transform: translateY(-5px);
-}
-
 .email {
     text-decoration: none;
     transition: color 0.3s ease-in-out;
@@ -68,4 +35,55 @@ footer {
 
 .email:hover {
     color: rgb(0,140,255);
+}
+
+.whatsapp-button {
+    background-color: #25d366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    right: 70px;
+    bottom: 8rem;
+    transition: opacity 0.3s ease;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.whatsapp-button:hover {
+    opacity: 0.8;
+}
+
+.whatsapp-button:hover::after {
+    content: attr(title);
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 8px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.whatsapp-button:hover::after {
+    opacity: 1; 
+}
+
+.fa-whatsapp {
+    font-size: 24px;
+    color: white;
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-button:hover .fa-whatsapp {
+    transform: translateY(-5px);
 }
