@@ -1,13 +1,13 @@
   import { getDatabase, ref, push } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-database.js";
 
   const firebaseConfig = {
-    apiKey: "SUA_API_KEY",
-    authDomain: "SEU_AUTH_DOMAIN",
-    projectId: "SEU_PROJECT_ID",
-    storageBucket: "SEU_STORAGE_BUCKET",
-    messagingSenderId: "SEU_SENDER_ID",
-    appId: "SEU_APP_ID",
-    measurementId: "SEU_MEASUREMENT_ID"
+    apiKey: "AIzaSyCUzI1hPGrthwJOSMYSW7QUP9XxpbrX7ns",
+    authDomain: "projeto-hamburgueria-dbc91.firebaseapp.com",
+    projectId: "projeto-hamburgueria-dbc91",
+    storageBucket: "projeto-hamburgueria-dbc91.appspot.com",
+    messagingSenderId: "265377743511",
+    appId: "1:265377743511:web:e13b2280af8d4d0c3d1fd2",
+    measurementId: "G-PS7NW4JNXC"
   };
 
   // Inicialize o Firebase Realtime Database
