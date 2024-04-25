@@ -1,2 +1,2 @@
-# Sistema-de-agendamento-de-provas
-Paper Faculdade
+# Sistema de Agendamentos para uma Hamburgueria
+Esse é um projeto que estamos desenvolvendo para um paper da faculdade.
