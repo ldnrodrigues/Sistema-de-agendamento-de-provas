@@ -30,7 +30,9 @@
   const database = getDatabase(app);
 
   // Função para enviar os dados do formulário para o Firebase
-  function enviarReserva() {
+  function enviarReserva(event) {
+    event.preventDefault();
+      
     const nome = document.getElementById('nome').value;
     const email = document.getElementById('email').value;
     const telefone = document.getElementById('telefone').value;
