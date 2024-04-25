@@ -220,5 +220,24 @@
   AOS.init();
 </script>
 
+<script type="module">
+
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-analytics.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyCUzI1hPGrthwJOSMYSW7QUP9XxpbrX7ns",
+    authDomain: "projeto-hamburgueria-dbc91.firebaseapp.com",
+    projectId: "projeto-hamburgueria-dbc91",
+    storageBucket: "projeto-hamburgueria-dbc91.appspot.com",
+    messagingSenderId: "265377743511",
+    appId: "1:265377743511:web:e13b2280af8d4d0c3d1fd2",
+    measurementId: "G-PS7NW4JNXC"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+
 </body>
 </html>
