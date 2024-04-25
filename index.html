@@ -12,7 +12,7 @@
 
   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
   import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-analytics.js";
-  import { getDatabase, ref, push } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-database.js";
+  import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore.js";
 
   const firebaseConfig = {
     apiKey: "AIzaSyCUzI1hPGrthwJOSMYSW7QUP9XxpbrX7ns",
@@ -27,49 +27,9 @@
 
   const app = initializeApp(firebaseConfig);
   const analytics = getAnalytics(app);
-  const database = getDatabase(app);
+  const db = getFirestore(app);
 
-  // Função para enviar os dados do formulário para o Firebase
-  function enviarReserva(event) {
-    event.preventDefault();
-      
-    const nome = document.getElementById('nome').value;
-    const email = document.getElementById('email').value;
-    const telefone = document.getElementById('telefone').value;
-    const data = document.getElementById('data').value;
-    const horario = document.getElementById('horario').value;
-    const numPessoas = document.getElementById('numPessoas').value;
-    const observacoes = document.getElementById('observacoes').value;
-
-    // Referência para o nó 'reservas'
-    const reservasRef = ref(database, 'reservas');
-
-    // Cria um novo nó com os dados da reserva
-    const novaReservaRef = push(reservasRef);
-    novaReservaRef.set({
-      nome: nome,
-      email: email,
-      telefone: telefone,
-      data: data,
-      horario: horario,
-      numPessoas: numPessoas,
-      observacoes: observacoes
-    }).then(() => {
-      alert('Reserva enviada com sucesso!');
-      // Limpa os campos do formulário após o envio
-      document.getElementById('nome').value = '';
-      document.getElementById('email').value = '';
-      document.getElementById('telefone').value = '';
-      document.getElementById('data').value = '';
-      document.getElementById('horario').value = '';
-      document.getElementById('numPessoas').value = '';
-      document.getElementById('observacoes').value = '';
-    }).catch((error) => {
-      console.error('Erro ao enviar reserva:', error);
-      alert('Erro ao enviar reserva. Por favor, tente novamente mais tarde.');
-    });
-  }
-    </script>
+  </script>
 
     <link rel="stylesheet" type="text/css" href="style.css">
 
@@ -173,53 +133,54 @@
     <h1 class="text-center fw-bold mb-5 mt-5 text-white" id="reserva" data-aos="zoom-in-down">Faça sua Reserva</h1>
       <div class="row justify-content-center">
         <div class="col-md-8">
-          <form onsubmit="enviarReserva(); return false;" data-aos="zoom-in-down">
+          <form id="formReserva" data-aos="zoom-in-down">
             <div class="mb-4">
-              <label for="nome" class="form-label">Nome</label>
-              <input type="text" class="form-control border-0 border-bottom bg-black text-white" id="nome" placeholder="Seu nome" style="color: white;">
+                <label for="nome" class="form-label">Nome</label>
+                <input type="text" class="form-control border-0 border-bottom bg-black text-white" id="nome" placeholder="Seu nome" style="color: white;">
             </div>
             <div class="mb-4">
-              <label for="email" class="form-label">Email</label>
-              <input type="email" class="form-control border-0 border-bottom bg-black text-white" id="email" placeholder="Seu email" style="color: white;">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control border-0 border-bottom bg-black text-white" id="email" placeholder="Seu email" style="color: white;">
             </div>
             <div class="mb-4">
-              <label for="telefone" class="form-label">Telefone</label>
-              <input type="tel" class="form-control border-0 border-bottom bg-black text-white" id="telefone" placeholder="Seu telefone" style="color: white;">
+                <label for="telefone" class="form-label">Telefone</label>
+                <input type="tel" class="form-control border-0 border-bottom bg-black text-white" id="telefone" placeholder="Seu telefone" style="color: white;">
             </div>
             <div class="row mb-4">
-              <div class="col">
-                <label for="data" class="form-label" title="Clique para escolher a data">Data da Reserva</label>
-                <input type="date" class="form-control border-0 border-bottom bg-black text-white" id="data" style="color: white;">
-              </div>
                 <div class="col">
-                  <label for="horario" class="form-label">Horário</label>
-                    <select class="form-select border-0 border-bottom bg-black text-white" id="horario" style="color: white;">
-                      <option selected>Escolha o horário</option>
-                      <option value="9:00">9:00</option>
-                      <option value="12:00">12:00</option>
-                      <option value="18:00">18:00</option>
-                    </select>
-                  </div>
+                    <label for="data" class="form-label" title="Clique para escolher a data">Data da Reserva</label>
+                    <input type="date" class="form-control border-0 border-bottom bg-black text-white" id="data" style="color: white;">
                 </div>
-                <div class="mb-4">
-                  <label for="numPessoas" class="form-label">Número de Pessoas</label>
-                    <select class="form-select border-0 border-bottom bg-black text-white" id="numPessoas" style="color: white;">
-                      <option selected>Escolha o número de pessoas</option>
-                      <option value="1">1 pessoa</option>
-                      <option value="2">2 pessoas</option>
-                      <option value="3">3 pessoas</option>
-                      <option value="4">4 pessoas</option>
-                      <option value="5">5 pessoas</option>
+                <div class="col">
+                    <label for="horario" class="form-label">Horário</label>
+                    <select class="form-select border-0 border-bottom bg-black text-white" id="horario" style="color: white;">
+                        <option selected>Escolha o horário</option>
+                        <option value="9:00">9:00</option>
+                        <option value="12:00">12:00</option>
+                        <option value="18:00">18:00</option>
                     </select>
-                  </div>
-                    <div class="mb-4">
-                      <label for="observacoes" class="form-label">Observações</label>
-                      <textarea class="form-control border-0 border-bottom bg-black text-white" id="observacoes" rows="3" placeholder="Digite suas observações" style="color: white;"></textarea>
-                    </div>
-                  <div class="text-center">
-                    <button type="submit" class="btn custom-button btn-lg text-white mt-5 mb-5">Enviar Reserva</button>
-                  </div>
-                </form>
+                </div>
+            </div>
+            <div class="mb-4">
+                <label for="numPessoas" class="form-label">Número de Pessoas</label>
+                <select class="form-select border-0 border-bottom bg-black text-white" id="numPessoas" style="color: white;">
+                    <option selected>Escolha o número de pessoas</option>
+                    <option value="1">1 pessoa</option>
+                    <option value="2">2 pessoas</option>
+                    <option value="3">3 pessoas</option>
+                    <option value="4">4 pessoas</option>
+                    <option value="5">5 pessoas</option>
+                </select>
+            </div>
+            <div class="mb-4">
+                <label for="observacoes" class="form-label">Observações</label>
+                <textarea class="form-control border-0 border-bottom bg-black text-white" id="observacoes" rows="3" placeholder="Digite suas observações" style="color: white;"></textarea>
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn custom-button btn-lg text-white mt-5 mb-5">Enviar Reserva</button>
+            </div>
+        </form>
+        
               </div>
             </div>
           </div>    
@@ -281,6 +242,51 @@
 
 <script>
   AOS.init();
+</script>
+
+<script>
+  // Defina a função enviarReserva fora do escopo do evento
+  async function enviarReserva() {
+    const nome = document.getElementById('nome').value;
+    const email = document.getElementById('email').value;
+    const telefone = document.getElementById('telefone').value;
+    const data = document.getElementById('data').value;
+    const horario = document.getElementById('horario').value;
+    const numPessoas = document.getElementById('numPessoas').value;
+    const observacoes = document.getElementById('observacoes').value;
+
+    try {
+      const docRef = await addDoc(collection(db, "reservas"), {
+        nome: nome,
+        email: email,
+        telefone: telefone,
+        data: data,
+        horario: horario,
+        numPessoas: numPessoas,
+        observacoes: observacoes
+      });
+      console.log("Reserva adicionada com ID: ", docRef.id);
+      alert('Reserva enviada com sucesso!');
+      // Limpa os campos do formulário após o envio
+      document.getElementById('nome').value = '';
+      document.getElementById('email').value = '';
+      document.getElementById('telefone').value = '';
+      document.getElementById('data').value = '';
+      document.getElementById('horario').value = '';
+      document.getElementById('numPessoas').value = '';
+      document.getElementById('observacoes').value = '';
+    } catch (e) {
+      console.error("Erro ao adicionar a reserva: ", e);
+      alert('Erro ao enviar reserva. Por favor, tente novamente mais tarde.');
+    }
+  }
+
+  // Adicione um listener de evento ao botão de envio do formulário
+  document.getElementById('formReserva').addEventListener('submit', function(event) {
+    event.preventDefault(); // Evita o envio padrão do formulário
+    enviarReserva(); // Chama a função enviarReserva quando o formulário for enviado
+    console.log
+  });
 </script>
 
 </body>
