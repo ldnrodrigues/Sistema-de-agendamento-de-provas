@@ -110,7 +110,7 @@
     <h1 class="text-center fw-bold mb-5 mt-5 text-white" id="reserva" data-aos="zoom-in-down">Faça sua Reserva</h1>
       <div class="row justify-content-center">
         <div class="col-md-8">
-          <form data-aos="zoom-in-down">
+          <form onsubmit="enviarReserva(); return false;" data-aos="zoom-in-down">
             <div class="mb-4">
               <label for="nome" class="form-label">Nome</label>
               <input type="text" class="form-control border-0 border-bottom bg-black text-white" id="nome" placeholder="Seu nome" style="color: white;">
